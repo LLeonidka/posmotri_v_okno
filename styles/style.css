@@ -96,7 +96,7 @@ ol {
   gap: 5px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   border-bottom: 1px solid #fff;
   cursor: pointer;
 }
@@ -125,9 +125,16 @@ ol {
   outline: none;
 }
 
+.search-form__textfield:active{
+  outline: 1px solid #fff;        /*ни чего не меняется. вопрос не ревьюеру а для себя*/
+  outline-offset: 2px;
+  border-top: none; 
+  border-bottom: none;      
+}
+
 .search-form__textfield:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px; /*Менял так ?*/
+  outline-offset: 2px;               /*Менял так. вопрос не ревьюеру а для себя*/
 }
 
 .search-form__checkbox-list {
@@ -152,7 +159,7 @@ ol {
 .search-form__pseudo-checkbox::after {
   content: "";
   width: 15px;
-  height: 15px; /*так?*/
+  height: 15px;             /*так*/
   background-color: #fff;
   position: absolute;
   inset: 0;
@@ -221,7 +228,7 @@ ol {
   max-width: 260px;
   margin: 0;
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -231,7 +238,7 @@ ol {
 
 .title .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -249,20 +256,16 @@ ol {
   position: relative;
 }
 
-/*.preloader {
-  position: absolute;
-}  Убрал не понял зачем он был*/
-
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.content__card-link {
+.content__card-link {  
   color: white;
   text-decoration: none;
   cursor: pointer;
-  display: block; /*??*/
-  margin: 2px; /*убрал 10 не получается рамка с лева*/
+  display: block; 
+  margin: 3px;            /*ставлю ,, не получается рамка с лева .вопрос не ревьюеру а для себя*/
 }
 
 .content__card-link:hover {
@@ -270,11 +273,11 @@ ol {
 }
 
 .content__card-link:active {
-  background-color: #545050; /*он уже где то был задан у меня*/
+  background-color: #545050; 
 }
 
 .content__card-link:focus {
-  outline: 1px solid #fff;
+  outline: none;
 }
 
 .content__card-link:focus-visible {
@@ -295,7 +298,7 @@ ol {
 }
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -303,11 +306,6 @@ ol {
   text-transform: uppercase;
   display: inline-block;
 }
-
-/*content__video-card-title::before{
-  content: "";
-  display: inline-block;
-} */
 
 .content__video-card-description {
   color: #fff;
@@ -323,7 +321,7 @@ ol {
   max-width: 194px;
   max-height: 103px;
   object-fit: cover;
-  object-position: center; /*визуально ни чего не поменялось?*/
+  object-position: center; /*визуально ни чего не поменялось. вопрос не ревьюеру а для себя*/
 }
 
 .more-button {
